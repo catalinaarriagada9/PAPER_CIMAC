@@ -1,0 +1,395 @@
+\documentclass[review,10pt]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{etoolbox}
+\usepackage{ragged2e}
+\usepackage{xurl}
+\usepackage[]{hyperref}
+\hypersetup{colorlinks,linkcolor=blue,urlcolor=blue}
+
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+\setlength{\LTcapwidth}{0.94\textwidth}
+\AtBeginEnvironment{longtable}{%
+  \footnotesize
+  \setlength{\tabcolsep}{2.6pt}
+  \renewcommand{\arraystretch}{1.15}
+}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{document}
+\begin{frontmatter}
+
+\title{Supplementary Material for ``Assessing Plastic-Packaging Circularity in Chile: EPR Performance, Data Gaps, and Measurement Readiness''}
+
+\author[1]{Catalina Arriagada}
+\author[1]{Ivan Derpich}
+\author[1]{Andrés Viveros}
+\author[1]{Juan Miguel Sepúlveda}
+\address[1]{Departamento de Ingeniería Industrial, Universidad de Santiago de Chile, Santiago, Chile}
+
+\end{frontmatter}
+
+\section{Purpose and Analytical Boundary}
+
+This supplement documents the provenance, treatment, and supporting series used in the manuscript. The aggregate analysis covers the Chilean plastics and plastic-packaging system. Resin-specific eC and IRP calculations are restricted to PET, PP, and PE because these are the categories with consistent coverage across managed material, virgin input, and emission factors. Values for 2024 form the reference assessment. Values for 2025 are a provisional extension and must be interpreted with the treatment information reported below.
+
+\section{Data Provenance}
+
+Table \ref{tab:s_provenance} links each analytical variable to its operational use, principal source, and treatment. Reported values are retained as published. Estimated values are identified in the calculation workbook and summarized in Table \ref{tab:s_treatments}.
+
+\begin{longtable}{|L{3.0cm}|L{3.0cm}|L{3.6cm}|L{5.2cm}|}
+\caption{Source-to-variable provenance and operational use}
+\label{tab:s_provenance}\\
+\hline
+\textbf{Variable} & \textbf{Period / scope} & \textbf{Operational use} & \textbf{Source and treatment} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Variable} & \textbf{Period / scope} & \textbf{Operational use} & \textbf{Source and treatment} \\
+\hline
+\endhead
+Total apparent plastics consumption & 2015--2025; 1,238,000 t in 2024 and 1,339,000 t in 2025 & Denominator of TR$_{total}$ and basis for the 48\% packaging estimate & ASIPLA annual industry statistics. The 2025 total is reported in the ASIPLA 2025 executive report: \url{https://asipla.cl/wp-content/uploads/2026/07/Informe-Estadistico-2025-resumen-ejecutivo.pdf}. \\
+\hline
+Estimated plastic-packaging input & 2015--2025; 594,240 t in 2024 & Denominator of TR$_{packaging}$, input to $T_{gr}$, and prior-year basis for IC$_{\mathrm{REP,est}}$ & Calculated as 48\% of total apparent plastics consumption, following the packaging share implemented in the study dataset. \\
+\hline
+Total recycled plastics & 2015--2025; 127,514 t in 2024 & Numerator of TR$_{total}$ & ASIPLA annual recycling-rate and plastics-consumption series; annual values are reported or derived from those two quantities as documented in the workbook. \\
+\hline
+Recycled plastic packaging & 2015--2025; 77,251.2 t in 2024 & Numerator of TR$_{packaging}$ and $V_{rec}$ in IC$_{\mathrm{REP,est}}$ & Calculated from estimated packaging input and the annual packaging recycling rate. \\
+\hline
+Managed material by resin ($Q_{rec}$) & PET, PP, and PE; 2015--2025 & Numerator of eC and material quantity in IRP & National Recycling Industry Association (ANIR). The 2015 and 2025 endpoints use documented conservative carry-forward treatment where an independent annual value was unavailable. \\
+\hline
+Virgin raw material by resin ($Q_{vir}$) & PET, PP, and PE; 2015--2025 & Denominator of eC & ASIPLA resin-composition reports and annual virgin-input totals. Interpolated resin shares are used for 2018--2021; 2025 is reconstructed from the 2025 total and reported or carried-forward composition information. See Table \ref{tab:s_virgin}. \\
+\hline
+Imported recycled raw material by resin & 2023--2025 & Contextual supply information; not used in eC or IRP & ASIPLA recent industry reports. Resin-disaggregated values were not located for earlier years, so no earlier annual values are imputed. See Table \ref{tab:s_recycled_imports}. \\
+\hline
+EPR target rates and implementation & From 16 September 2023 & Target rate $\tau_t$ and start year for IC$_{\mathrm{REP,est}}$ & Supreme Decree No. 12/2020 and Ministry of the Environment packaging information: \url{https://www.bcn.cl/leychile/Navegar?idNorma=1157019} and \url{https://economiacircular.mma.gob.cl/envases-y-embalajes/}. \\
+\hline
+Population & 2015--2025; 19,764,771 in 2024 & Denominator of $T_{gr}$ & World Bank indicator SP.POP.TOTL for Chile, retained in the source workbook: \url{https://datos.bancomundial.org/indicador/SP.POP.TOTL?locations=CL}. \\
+\hline
+Virgin and recycled emission factors & PET, PP, and PE; time invariant & Parameters for IRP & Leal Filho et al. (2025). These are transferred factors, not annual measurements from Chilean recycling facilities. \\
+\hline
+\end{longtable}
+
+\section{Supporting Resin-Level Series}
+
+Table \ref{tab:s_recycled_imports} reports imported recycled raw material as a contextual supply series. It is kept separate from $Q_{rec}$ because imported feedstock and domestically managed material represent different flows. No values are shown before 2023 because the reviewed reports did not provide a reproducible resin allocation for those years.
+
+\begin{longtable}{|L{3.0cm}|L{2.2cm}|L{2.2cm}|L{2.2cm}|L{5.2cm}|}
+\caption{Imported recycled raw material by reported category, 2023--2025 (t)}
+\label{tab:s_recycled_imports}\\
+\hline
+\textbf{Category} & \textbf{2023} & \textbf{2024} & \textbf{2025} & \textbf{Use in the study} \\
+\hline
+\endfirsthead
+\hline
+PET & 3,423 & 7,303 & 6,353 & Context only; not added to $Q_{rec}$ or used as $Q_{vir}$. \\
+\hline
+PP & 531 & 319 & 53 & Context only; the low reported quantities are retained without reallocation. \\
+\hline
+PE & 1,627 & 2,086 & 784 & Context only; not used in the eC or IRP formulas. \\
+\hline
+Other resins & 408 & 115 & 314 & Retained as reported and not reassigned to the three-resin analytical boundary. \\
+\hline
+\end{longtable}
+
+Table \ref{tab:s_virgin} provides the eC denominator. PE is the sum of the high-density, linear low-density, and low-density polyethylene categories recorded in the calculation workbook.
+
+\begin{longtable}{|L{1.3cm}|*{11}{L{1.05cm}|}}
+\caption{Virgin raw material by included resin, 2015--2025 (t)}
+\label{tab:s_virgin}\\
+\hline
+\textbf{Resin} & \textbf{2015} & \textbf{2016} & \textbf{2017} & \textbf{2018} & \textbf{2019} & \textbf{2020} & \textbf{2021} & \textbf{2022} & \textbf{2023} & \textbf{2024} & \textbf{2025} \\
+\hline
+\endfirsthead
+\hline
+PET & 94,900 & 95,810 & 111,600 & 109,800 & 104,100 & 102,150 & 119,100 & 102,150 & 92,400 & 93,660 & 101,153 \\
+\hline
+PP & 36,500 & 52,000 & 61,000 & 58,261 & 53,573 & 50,936 & 57,484 & 47,670 & 62,000 & 64,000 & 77,000 \\
+\hline
+PE & 328,500 & 331,000 & 328,000 & 329,904 & 319,599 & 320,304 & 381,257 & 333,690 & 346,400 & 343,980 & 357,000 \\
+\hline
+\end{longtable}
+
+\section{MCI Data-Feasibility Assessment}
+
+Table \ref{tab:s_mci} records why a numerical MCI is not reported. Availability of a related national quantity is not sufficient unless it has the same product, temporal, and geographical boundary as the remaining variables.
+
+\begin{longtable}{|L{2.0cm}|L{4.3cm}|L{4.0cm}|L{5.0cm}|}
+\caption{Availability of variables required for a full Material Circularity Indicator}
+\label{tab:s_mci}\\
+\hline
+\textbf{Variable} & \textbf{Required meaning} & \textbf{Availability in the Chilean dataset} & \textbf{Decision} \\
+\hline
+\endfirsthead
+\hline
+$M$ & Mass of finished products within the assessed product system & Only estimated national packaging input is available; it is not a product-level finished-mass inventory. & Insufficient for a full MCI boundary. \\
+\hline
+$V$ & Virgin feedstock entering the same assessed products & Imported virgin raw material is available, but it is not equivalent to all virgin feedstock entering Chilean plastic packaging. & Not combined with estimated packaging mass. \\
+\hline
+$W$ & Unrecoverable waste leaving the same product system & No complete national series was identified at the required packaging boundary. & Not assigned a value of zero. \\
+\hline
+$W_f$ & Process losses in production of recycled feedstock & No auditable national series was identified. & Not assigned a value of zero. \\
+\hline
+$W_c$ & Losses in end-of-life recycling of the assessed products & No auditable national series was identified. & Not assigned a value of zero. \\
+\hline
+$F(X)$ & Utility or lifetime function relative to an industry-average product & No national packaging utility or lifetime function was identified. & No fixed utility factor is imposed. \\
+\hline
+\end{longtable}
+
+\section{Public-Source Audit Protocol}
+
+The audit assessed information publicly accessible up to 15 September 2026. Searches covered governmental and regulatory repositories, the national open-data infrastructure, sectoral associations, and public reports from EPR management systems. Institution names were combined with the Spanish terms \textit{envases y embalajes}, \textit{plásticos}, \textit{resina}, \textit{productos puestos en el mercado}, \textit{recolección}, \textit{valorización}, \textit{reciclaje}, \textit{destino}, \textit{mermas}, \textit{contenido reciclado}, and \textit{cumplimiento REP}. A record was included when it exposed a document, dataset, metadata page, or reporting specification relevant to at least one required variable. Information described as existing inside an authenticated reporting system was classified as non-public unless an open table or downloadable file was also located. Table \ref{tab:s_audit_sources} preserves the repository-level search trail.
+
+\begin{longtable}{|L{2.6cm}|L{3.2cm}|L{4.5cm}|L{4.7cm}|}
+\caption{Repositories and public outputs examined in the readiness audit}
+\label{tab:s_audit_sources}\\
+\hline
+\textbf{Source} & \textbf{Public output examined} & \textbf{Relevant information located} & \textbf{Audit implication} \\
+\hline
+\endfirsthead
+\hline
+MMA circular-economy portal and Decree No. 12/2020 & Packaging/EPR pages, decree, and implementation material & Statutory targets, categories, dates, roles, and reporting obligations & Regulatory definitions are Available; national realized flows are not supplied as an integrated open series. \\
+\hline
+RETC/SINADER open data & Waste summaries, destination records, and downloadable recipient datasets & Aggregate non-hazardous waste generation and destination information & Partial for MFA because product, resin, and value-chain boundaries are not consistently aligned with plastic packaging. \\
+\hline
+RETC historical EPR dataset & Grouped declarations of priority products for 2019--2022 & Historical quantities of products placed on the market & Partial and pre-operational; not an audited post-implementation national compliance series. \\
+\hline
+SMA and REP-SG & Platform description, guidance, and public FAQs & Reporting architecture and official denominator rules & Reports are submitted through an authenticated platform; an open national numerator--denominator table was not located. \\
+\hline
+National Customs Service / datos.gob.cl & Import and export datasets by tariff code & Trade quantities potentially related to virgin and recycled polymers & Partial because tariff descriptions do not consistently identify packaging use, recycled content, or final destination. \\
+\hline
+ASIPLA & Annual industry statistics and recycling reports & Apparent consumption, imports, resin composition, and recycling aggregates & Main source for TR and virgin-input estimates; sectoral and incomplete for circular-flow closure. \\
+\hline
+ANIR & National recycling statistics and PET, PP, and PE material studies & Material available, managed, and unmanaged for selected materials and years & Useful partial MFA evidence; definitions and annual coverage are not sufficient for a complete national balance or MCI. \\
+\hline
+ReSimple & Public 2024 annual report & System-specific tonnes collected, recovered, and credited, plus traceability procedures & Partial system-level evidence; it does not represent all Chilean obligated packaging flows. \\
+\hline
+GIRO & Public 2024 annual report & System-specific placed-on-market and recovery quantities by origin/material & Partial system-level evidence; some flows remain under analysis and national coverage is incomplete. \\
+\hline
+ProREP & Public institutional material and website search & Description of non-household management activity & No comparable open annual dataset with sufficient flow detail was located by the cutoff date. \\
+\hline
+\end{longtable}
+
+The principal access points were the MMA packaging portal (\url{https://economiacircular.mma.gob.cl/envases-y-embalajes/}), the RETC open-data portal (\url{https://retc.mma.gob.cl/mapas-open-data/}), the RETC priority-products dataset (\url{https://datosretc.mma.gob.cl/es/dataset/productos-prioritarios-rep}), the SMA REP-SG information page (\url{https://portal.sma.gob.cl/index.php/ley-rep-lanzan-nueva-plataforma-para-que-sistemas-de-gestion-informen-el-cumplimiento-de-metas/}), the ASIPLA statistics portal (\url{https://asipla.cl/estadisticas-de-la-industria/}), the ReSimple annual-report archive (\url{https://resimple.cl/nosotros/memorias-anuales/}), and the National Customs Service datasets indexed by the Chilean open-data portal (\url{https://datos.gob.cl/organization/servicio_nacional_de_aduanas}). The repository source inventory preserves the institutional access points used in the audit; working copies of ANIR and GIRO documents are retained by the authors but are not redistributed without an explicit reuse basis. Access status was recorded at the cutoff date; the audit should therefore be updated if repositories publish new series before submission.
+
+\section{Readiness Criteria and Source--Variable--Boundary Inventory}
+
+Readiness is evaluated at the level of a measurement application, not at the level of an institution. \textit{Available} means that all indispensable variables are publicly accessible at compatible boundaries and permit direct calculation without unsupported assumptions. \textit{Partial} means that relevant information exists but requires a disclosed proxy or reconstruction, has incomplete temporal or material coverage, or contains a limited boundary mismatch. \textit{Insufficient} means that at least one indispensable variable cannot be defensibly reconstructed from the public evidence reviewed. The categories are not converted into numbers or averaged.
+
+\begin{longtable}{|L{3.1cm}|L{5.2cm}|L{6.7cm}|}
+\caption{Dimensions used to assess measurement readiness}
+\label{tab:s_readiness_dimensions}\\
+\hline
+\textbf{Dimension} & \textbf{Question applied} & \textbf{Condition for an Available classification} \\
+\hline
+\endfirsthead
+\hline
+Availability & Are all indispensable variables present? & Numerator, denominator, and required auxiliary variables are identifiable. \\
+\hline
+Public accessibility & Can an external user retrieve the information? & Open document, dataset, or machine-readable file; no authenticated administrative access required. \\
+\hline
+Temporal continuity & Are compatible years available? & Sufficient continuous observations for the period claimed, with reference-year data reported rather than imputed. \\
+\hline
+Material/product granularity & Is the information resolved at the required category? & Plastic packaging and, where required, resin-specific categories can be isolated. \\
+\hline
+Boundary compatibility & Do variables describe the same system? & Geographic, product, temporal, and value-chain boundaries are mutually consistent. \\
+\hline
+Final-destination traceability & Is the downstream fate observable? & Material is traced beyond collection/recovery to disposal, export, or reinsertion into production. \\
+\hline
+Definitions and metadata & Are variables and units operationally defined? & Definitions, units, coverage, and responsible institution are documented. \\
+\hline
+Interoperability & Can sources be linked without unsupported matching? & Stable categories or identifiers permit combination across reporting systems. \\
+\hline
+Quality and uncertainty & Are validation and uncertainty documented? & Reported/estimated status, validation rules, and relevant uncertainty are visible. \\
+\hline
+Direct computability & Can the indicator be reproduced from public data? & Calculation requires no undocumented coefficient, imputation, or boundary substitution. \\
+\hline
+\end{longtable}
+
+\begin{longtable}{|L{3.0cm}|L{3.2cm}|L{3.2cm}|L{5.6cm}|}
+\caption{Condensed source--variable--boundary inventory}
+\label{tab:s_boundary_inventory}\\
+\hline
+\textbf{Public series} & \textbf{Variables / period} & \textbf{Boundary} & \textbf{Use and incompatibility} \\
+\hline
+\endfirsthead
+\hline
+ASIPLA annual statistics & Consumption, virgin/resin imports, recycling; 2015--2025 with gaps & National plastics; selected resin detail & Supports aggregate TR and eC inputs; packaging and some annual resin values require reconstruction. \\
+\hline
+ANIR material studies/statistics & Available, managed, and unmanaged material; selected years & National selected materials/resins; management may include export & Supports $Q_{rec}$ and partial MFA; managed material is not identical to recycled feedstock entering Chilean products. \\
+\hline
+MMA/BCN EPR regulation & Target rates and legal categories; implementation from 2023 & Obligated packaging under legal definitions & Supports $\tau_t$; does not provide the realized national numerator. \\
+\hline
+SMA REP-SG architecture & Producer and management-system reporting requirements & Legally obligated entities and target categories & Shows that compliance data are collected; underlying national records are not publicly retrievable as an integrated table. \\
+\hline
+RETC priority-products dataset & Grouped products placed on market; 2019--2022 & Historical priority-product declarations & Partial denominator context; precedes operational packaging targets and lacks full post-2023 continuity. \\
+\hline
+SINADER/RETC waste data & Generated and destination quantities; annual summaries/files & Waste generators and recipients, broad material categories & Partial outputs for MFA; cannot be reconciled directly with packaging placed on market by resin. \\
+\hline
+ReSimple and GIRO reports & System-level placed-on-market, collection/recovery, and credited tonnes; 2024 & Participating producers and each management system & Demonstrate traceability at system level but cannot be summed into a verified national account without harmonized coverage and double-count controls. \\
+\hline
+Customs trade data & Imports/exports by tariff code & Traded commodities & Potentially supports polymer supply; packaging application, recycled status, and final use are not consistently encoded. \\
+\hline
+Leal Filho et al. (2025) & Virgin/recycled emission factors & External resin production systems & Enables proxy IRP only; factors are neither Chile-specific nor annual observations. \\
+\hline
+\end{longtable}
+
+\section{Indicator-Level Readiness Profile}
+
+Table \ref{tab:s_readiness_matrix} reports the dimension-level judgement. A = Available, P = Partial, and I = Insufficient. A final classification cannot exceed an indispensable dimension classified as Insufficient; however, the matrix is diagnostic and no aggregate score is calculated.
+
+\begin{landscape}
+\begin{longtable}{|L{2.7cm}|*{10}{L{1.25cm}|}L{1.8cm}|}
+\caption{Readiness profile by measurement application and dimension}
+\label{tab:s_readiness_matrix}\\
+\hline
+\textbf{Application} & \textbf{Avail.} & \textbf{Access} & \textbf{Time} & \textbf{Gran.} & \textbf{Boundary} & \textbf{Dest.} & \textbf{Meta.} & \textbf{Interop.} & \textbf{Quality} & \textbf{Compute} & \textbf{Final} \\
+\hline
+\endfirsthead
+\hline
+TR$_{total}$ & A & A & A & A & A & P & A & A & P & A & Available \\
+\hline
+TR$_{packaging}$ & P & A & P & P & P & P & P & P & P & P & Partial \\
+\hline
+IC$_{\mathrm{REP,est}}$ & P & P & I & P & P & P & A & I & P & P & Partial \\
+\hline
+eC & P & A & P & P & P & I & P & P & P & P & Partial \\
+\hline
+IRP & P & A & P & P & P & I & P & P & I & P & Partial \\
+\hline
+MCI & I & P & I & I & I & I & P & I & I & I & Insufficient \\
+\hline
+Minimum national MFA & I & P & I & P & I & I & P & I & P & I & Insufficient \\
+\hline
+\end{longtable}
+\end{landscape}
+
+\begin{longtable}{|L{2.7cm}|L{6.0cm}|L{6.0cm}|}
+\caption{Evidence underlying the final readiness classifications}
+\label{tab:s_readiness_evidence}\\
+\hline
+\textbf{Application} & \textbf{Evidence supporting calculation} & \textbf{Reason for the final classification} \\
+\hline
+\endfirsthead
+\hline
+TR$_{total}$ & Compatible aggregate apparent-consumption and recycled-plastics series. & Directly computable, although the source is sectoral and final material destinations are not resolved. \\
+\hline
+TR$_{packaging}$ & Aggregate plastics series and annual packaging-recycling estimates. & Requires the 48\% packaging allocation and reconstruction of missing years. \\
+\hline
+IC$_{\mathrm{REP,est}}$ & Public statutory targets and study estimates of prior-year packaging input and recovered volume. & Reproduces an analytical benchmark, not the official audited compliance calculation; open national REP-SG results were not located. \\
+\hline
+eC & PET, PP, and PE managed-material and virgin-input series. & Restricted resin coverage, reconstructed years, and no observation of incorporation into new products. \\
+\hline
+IRP & Managed tonnes and resin-specific virgin/recycled emission-factor differences. & Potential rather than realized impact because factors are transferred and displacement is assumed. \\
+\hline
+MCI & Partial proxies for mass inputs and managed outputs. & Required product-level input fractions, unrecovered waste, recycling losses, destinations, and utility are unavailable at one boundary. \\
+\hline
+Minimum national MFA & Partial ASIPLA, ANIR, RETC/SINADER, customs, and management-system observations. & No interoperable national mass balance links input, stock, collection, sorting, loss, export, disposal, and secondary-use flows. \\
+\hline
+\end{longtable}
+
+\section{Deterministic Sensitivity Analysis}
+
+The sensitivity analysis isolates assumptions introduced by data completion. It does not assign probability distributions to the inputs and therefore does not produce confidence intervals. Each scenario changes one assumption while retaining the remaining reference-case inputs.
+
+\begin{longtable}{|L{3.0cm}|L{2.0cm}|L{3.2cm}|L{3.2cm}|L{3.2cm}|}
+\caption{Sensitivity to the assumed packaging share, reference year 2024}
+\label{tab:s_packaging_sensitivity}\\
+\hline
+\textbf{Output} & \textbf{Unit} & \textbf{43\% share} & \textbf{48\% reference} & \textbf{53\% share} \\
+\hline
+\endfirsthead
+\hline
+Estimated packaging input & t & 532,340 & 594,240 & 656,140 \\
+\hline
+$T_{gr}$ & kg/inhab/year & 26.9 & 30.1 & 33.2 \\
+\hline
+TR$_{packaging}$ & \% & 13.0 & 13.0 & 13.0 \\
+\hline
+IC$_{\mathrm{REP,est}}$ & \% & 82.0 & 82.0 & 82.0 \\
+\hline
+\end{longtable}
+
+For TR$_{packaging}$, estimated recovered packaging is the product of packaging input and the packaging recycling rate. The packaging-share coefficient therefore cancels between numerator and denominator. For IC$_{\mathrm{REP,est}}$, the same cancellation occurs because a time-invariant packaging share is applied to the recovered-volume estimate and to prior-year packaging input. The unchanged ratios are an algebraic property of the implemented model, not evidence that the underlying packaging allocation is known without uncertainty.
+
+\begin{longtable}{|L{1.5cm}|L{1.6cm}|L{3.4cm}|L{3.4cm}|L{3.4cm}|}
+\caption{Sensitivity of eC to alternative resin-share allocations during the interpolated period}
+\label{tab:s_ec_sensitivity}\\
+\hline
+\textbf{Resin} & \textbf{Year} & \textbf{2017 share held constant} & \textbf{Linear interpolation} & \textbf{2022 share applied} \\
+\hline
+\endfirsthead
+\hline
+PET & 2018 & 0.1386 & 0.1386 & 0.1386 \\
+PET & 2019 & 0.1689 & 0.1689 & 0.1689 \\
+PET & 2020 & 0.1874 & 0.1874 & 0.1874 \\
+PET & 2021 & 0.2049 & 0.2049 & 0.2049 \\
+\hline
+PP & 2018 & 0.0139 & 0.0143 & 0.0163 \\
+PP & 2019 & 0.0139 & 0.0148 & 0.0163 \\
+PP & 2020 & 0.3185 & 0.3492 & 0.3731 \\
+PP & 2021 & 0.3127 & 0.3541 & 0.3662 \\
+\hline
+PE & 2018 & 0.1223 & 0.1197 & 0.1101 \\
+PE & 2019 & 0.1235 & 0.1182 & 0.1111 \\
+PE & 2020 & 0.1297 & 0.1216 & 0.1167 \\
+PE & 2021 & 0.1305 & 0.1198 & 0.1174 \\
+\hline
+\end{longtable}
+
+The endpoint allocations bound the effect of the resin-share interpolation while holding annual aggregate virgin input and managed material fixed. PET is invariant because its 2017 and 2022 shares are both 15\%. PP shows the widest relative response and should not be interpreted as a precisely observed historical trajectory during 2018--2021. Linear interpolation remains the reference because it avoids imposing either endpoint composition on the complete interval.
+
+\begin{longtable}{|L{4.0cm}|L{3.0cm}|L{3.0cm}|L{4.0cm}|}
+\caption{Sensitivity of 2024 IRP and treatment of the provisional 2025 extension}
+\label{tab:s_irp_displacement}\\
+\hline
+\textbf{Scenario} & \textbf{Displacement fraction} & \textbf{IRP (Mt CO$_2$eq)} & \textbf{Interpretation} \\
+\hline
+\endfirsthead
+\hline
+Conservative displacement & 50\% & 0.087388 & Half of managed material is assumed to displace virgin production. \\
+\hline
+Intermediate displacement & 75\% & 0.131081 & Three quarters of managed material is assumed to displace virgin production. \\
+\hline
+Reference potential & 100\% & 0.174775 & One-to-one displacement; upper analytical potential under the adopted factors. \\
+\hline
+2025 exclusion case & Not applied & Not reported & Resin-level 2025 eC and IRP are withheld because $Q_{rec}$ is carried forward. \\
+\hline
+2025 provisional extension & 100\% & 0.174775 & Same numerical result as 2024 by construction; not an independent observation. \\
+\hline
+\end{longtable}
+
+\section{Summary of Data Treatments}
+
+\begin{longtable}{|L{3.4cm}|L{2.4cm}|L{4.4cm}|L{5.0cm}|}
+\caption{Treatments that affect interpretation of the reported series}
+\label{tab:s_treatments}\\
+\hline
+\textbf{Series} & \textbf{Affected years} & \textbf{Treatment} & \textbf{Interpretive consequence} \\
+\hline
+\endfirsthead
+\hline
+Managed material by resin ($Q_{rec}$) & 2015 and 2025 & Conservative endpoint carry-forward from the nearest reported year & The endpoint values preserve continuity but are not independent annual observations. \\
+\hline
+Virgin material by resin ($Q_{vir}$) & 2015 & First reported resin composition carried backward conservatively & eC for 2015 is an estimate. \\
+\hline
+Virgin material by resin ($Q_{vir}$) & 2018--2021 & Linear interpolation of resin shares between documented ASIPLA composition years, multiplied by annual aggregate virgin input & eC changes in these years reflect both observed aggregate totals and interpolated composition. \\
+\hline
+Virgin material by resin ($Q_{vir}$) & 2025 & PET adjusted using the reported annual change; remaining tracked resin shares carried forward from 2024 and reconciled with the 2025 total & All 2025 resin-specific eC values are provisional. \\
+\hline
+Total and packaging recycling series & Selected missing years & Interpolation or conservative carry-forward, recorded by cell in the calculation workbook & Historical trends are reconstructed; estimated values are not presented as direct measurements. \\
+\hline
+Emission factors & 2015--2025 & Constant transferred factors by resin & IRP variation reflects $Q_{rec}$, not annual changes in Chilean technology or electricity supply. \\
+\hline
+\end{longtable}
+
+\section{Reproducibility Note}
+
+The corrected calculation workbook contains the formulas for TR, $T_{gr}$, IC$_{\mathrm{REP,est}}$, eC, and IRP; a validation sheet compares the manuscript values with the calculated values after rounding. The workbook also records the source and completion method for reconstructed inputs. The manuscript, supplement, workbook, source inventory, verification outputs, and figure-generation script have been prepared for public release at \url{https://github.com/catalinaarriagada9/PAPER_CIMAC}. External source documents are identified by their institutional access points rather than redistributed without an explicit reuse basis. Repository completeness, licensing, and the permanent archived version will be verified before submission.
+
+\end{document}
